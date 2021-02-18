@@ -6,7 +6,19 @@ $(".btn1").click(function(){
     var current = $(this).attr('class').split(' ')[0];
     nearBlocks(parent,current);
     pressed("."+parent+" " + "."+current)
+    checker()
   });
+
+  function nearBlocks(parent, current){
+    var top = "._"+(Number(parent.substr(1,2))-1) +" "+ "."+current;
+    var bot = "._"+(Number(parent.substr(1,2))+1) +" "+ "."+current;
+    var left = "."+ parent + " " + "._"+ (Number(current.substr(1,2))-1)
+    var right = "."+ parent + " " + "._"+ (Number(current.substr(1,2))+1)
+    pressed(top);
+    pressed(bot);
+    pressed(left);
+    pressed(right);
+}
 
 function pressed(picked){
 
@@ -16,6 +28,4 @@ function pressed(picked){
     else{
         $(picked).addClass("pressed");
     }
-
-
 }  
