@@ -1,7 +1,33 @@
 
-// add win cheker solution and random
+var clicks = 0
+
+$(document).keydown(function(e){
+    if(e.keyCode==82){
+        random();
+    }
+});
+
+
+function random(){
+    for(var i = 0 ; i < Math.floor(Math.random()*10 + 1) ; i++){    
+    nearBlocks("_" +Math.floor(Math.random()*5 + 1), "_"+ Math.floor(Math.random()*5 + 1))
+    }
+}
+    
+
+function checker(){
+var current = $(".pressed").length
+if (Number(current) === 25)
+    {
+        $("#title").text("Congratulations,You Win!")
+    }   
+}
+
 
 $(".btn1").click(function(){
+    clicks++;
+    $("#clicks").text("Clicks:"+clicks)
+
     var parent = $(this).parent().attr("class").split(' ')[1];
     var current = $(this).attr('class').split(' ')[0];
     nearBlocks(parent,current);
@@ -28,4 +54,5 @@ function pressed(picked){
     else{
         $(picked).addClass("pressed");
     }
+  
 }  
