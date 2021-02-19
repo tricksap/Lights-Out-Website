@@ -13,7 +13,6 @@ function random(){
     nearBlocks("_" +Math.floor(Math.random()*5 + 1), "_"+ Math.floor(Math.random()*5 + 1))
     }
 }
-    
 
 function checker(){
 var current = $(".pressed").length
