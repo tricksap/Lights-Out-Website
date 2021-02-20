@@ -1,9 +1,10 @@
 
 var clicks = 0
+var state = [];
 
 $(document).keydown(function(e){
-    if(e.keyCode==82){
-        random();
+     if(e.keyCode==82){
+         random();
     }
 });
 
