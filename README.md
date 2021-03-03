@@ -24,7 +24,7 @@ I recreated simple game of lights out using Jquery and Javascript,I created this
 * JavaScript
 
 ## Features
-List of features ready and TODOs for future development
+List of features:
 * Generate random pattern
 * Count the number of clicks 
 
